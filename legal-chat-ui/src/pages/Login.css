@@ -1,0 +1,189 @@
+/* Reset + Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f0f4f9;
+  }
+  
+  /* Layout */
+  .login-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  /* Left Info Panel */
+  .login-info {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 60px 40px;
+    color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeInLeft 1s ease-in-out;
+  }
+  
+  .login-info h1 {
+    color: #0047ab;
+    font-size: 38px;
+    margin-bottom: 10px;
+  }
+  
+  .login-info h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 25px;
+  }
+  
+  .login-info p {
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: #444;
+    line-height: 1.6;
+  }
+  
+  .login-info ul {
+    list-style: none;
+    margin-bottom: 25px;
+  }
+  
+  .login-info li {
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: #0056b3;
+  }
+  
+  .login-info blockquote {
+    background-color: #eef6ff;
+    border-left: 4px solid #007bff;
+    padding: 12px 20px;
+    font-style: italic;
+    color: #333;
+    border-radius: 6px;
+    max-width: 90%;
+  }
+  
+  /* Right Login Panel */
+  .login-form-container {
+    flex: 1;
+    background-color: #e6f0ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slideInRight 1s ease-in-out;
+  }
+  
+  /* Form Card */
+  .form-card {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .form-card h2 {
+    text-align: center;
+    color: #0047ab;
+    margin-bottom: 25px;
+  }
+  
+  .form-card form input {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: 0.3s ease;
+    font-size: 15px;
+  }
+  
+  .form-card form input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .form-card button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form-card button:hover {
+    background-color: #0056cc;
+  }
+  
+  .register-link {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 14px;
+  }
+  
+  .register-link a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .register-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Animations */
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /* Responsive (Optional) */
+  @media (max-width: 768px) {
+    .login-container {
+      flex-direction: column;
+    }
+  
+    .login-info, .login-form-container {
+      flex: unset;
+      width: 100%;
+      padding: 40px 20px;
+    }
+  
+    .login-info {
+      text-align: center;
+    }
+  
+    .login-info blockquote {
+      margin: 0 auto;
+    }
+  }
+  
